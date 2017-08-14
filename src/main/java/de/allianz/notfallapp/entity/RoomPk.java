@@ -13,13 +13,13 @@ public class RoomPk implements Serializable {
 	private String roomName;
 	
 	@Column(name="map_id")
-	private int mapId;
+	private long mapId;
 
 	public String getRoomName() {
 		return roomName;
 	}
 
-	public int getMapId() {
+	public long getMapId() {
 		return mapId;
 	}
 	

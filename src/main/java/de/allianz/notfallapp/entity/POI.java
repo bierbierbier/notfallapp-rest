@@ -18,7 +18,7 @@ public class POI {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="poi_id")
-	private int poi_id;
+	private long poi_id;
 	
 	@ManyToOne
 	@JoinColumn(name="map_id")

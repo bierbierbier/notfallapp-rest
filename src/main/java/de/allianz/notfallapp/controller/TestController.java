@@ -21,7 +21,12 @@ public class TestController {
 
 	@RequestMapping("/greeting")
 	public String hallo() {
-		return "Hallo Dennis! Du sexy Maus!!";
+		return "Test 123";
+	}
+	
+	@GetMapping("/")
+	public void countMaps() {
+		mapDao.delete((long) 1);
 	}
 	
 	@GetMapping("/maps")

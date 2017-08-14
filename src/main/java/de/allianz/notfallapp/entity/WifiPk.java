@@ -10,7 +10,7 @@ public class WifiPk implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Column(name = "pos_id")
-	private int posId;
+	private long posId;
 	@Column(name="mac_adress")
 	private String macAdress;
 

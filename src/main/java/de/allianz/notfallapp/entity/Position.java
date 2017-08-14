@@ -24,7 +24,7 @@ public class Position implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="pos_id")
-	private int pos_id;
+	private long pos_id;
 	
 	@ManyToOne
 	@JoinColumn(name="map_id")

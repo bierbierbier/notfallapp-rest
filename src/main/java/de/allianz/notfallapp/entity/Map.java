@@ -17,7 +17,7 @@ public class Map {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="map_id")
-	private int map_id;
+	private long map_id;
 	
 	@Column(name="map_name")
 	private String map_name;
@@ -38,7 +38,7 @@ public class Map {
 		this.map_name = map_name;
 	}
 	
-	public int getMap_id() {
+	public long getMap_id() {
 		return map_id;
 	}
 	
