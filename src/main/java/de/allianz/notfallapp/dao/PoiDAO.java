@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import de.allianz.notfallapp.entity.POI;
 
 @Transactional
-public interface PoiDAO extends CrudRepository<POI, Long>{
+public interface PoiDAO extends CrudRepository<POI, Integer>{
 
 }

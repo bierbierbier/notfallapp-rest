@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import de.allianz.notfallapp.entity.Wifi;
 
 @Transactional
-public interface WifiDAO extends CrudRepository<Wifi, Long> {
+public interface WifiDAO extends CrudRepository<Wifi, Integer> {
 
 }

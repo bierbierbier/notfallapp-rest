@@ -1,5 +1,7 @@
 package de.allianz.notfallapp.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,15 +15,20 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name="poi")
-public class POI {
+public class POI implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 689020756885005917L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="poi_id")
-	private long poi_id;
+	private int poi_id;
 	
 	@ManyToOne
-	@JoinColumn(name="map_id")
+	@JoinColumn(name="map_id", referencedColumnName="map_id")
 	@JsonBackReference
 	private Map map;
 	
@@ -50,6 +57,10 @@ public class POI {
 
 	public int getY() {
 		return y;
+	}
+	
+	public int getPoi_id() {
+		return this.poi_id;
 	}
 
 	public Map getMap() {

@@ -1,5 +1,7 @@
 package de.allianz.notfallapp.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -11,13 +13,18 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name="room")
-public class Room {
+public class Room implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9107750356300847300L;
+
 	@EmbeddedId
 	private RoomPk key;
 	
 	@ManyToOne
 	@MapsId("mapId")
-	@JoinColumn(name="map_id")
+	@JoinColumn(name="map_id", referencedColumnName="map_id")
 	@JsonBackReference
 	private Map map;
 

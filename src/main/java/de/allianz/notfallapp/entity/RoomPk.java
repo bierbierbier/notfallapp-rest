@@ -7,20 +7,24 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class RoomPk implements Serializable {
-	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5351476114571351880L;
 
 	@Column(name="room_name")
 	private String roomName;
 	
 	@Column(name="map_id")
-	private long mapId;
+	private int mapId;
 
 	public String getRoomName() {
 		return roomName;
 	}
 
-	public long getMapId() {
-		return mapId;
+	public int getMapId() {
+		return  mapId;
 	}
 	
 	

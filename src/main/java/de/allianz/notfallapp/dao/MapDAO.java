@@ -5,6 +5,6 @@ import de.allianz.notfallapp.entity.Map;
 import org.springframework.data.repository.CrudRepository;
 
 @Transactional
-public interface MapDAO extends CrudRepository<Map, Long> {
+public interface MapDAO extends CrudRepository<Map, Integer> {
 
 }
